@@ -1,0 +1,23 @@
+.container {
+    display: grid;
+    grid: 1fr 5fr / 1fr 3fr;
+    
+}
+
+.sidebar {
+    border: solid 2px red;
+    display: grid;
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.header {
+    border: solid 2px blueviolet;
+    display: grid;
+    grid-area: 1 / 2 ;
+}
+
+.main {
+    border: solid 2px palegreen;
+    display: grid;
+    grid-area: 2 / 2;
+}
