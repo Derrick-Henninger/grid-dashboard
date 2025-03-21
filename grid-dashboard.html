@@ -8,22 +8,89 @@
 </head>
 <body>
     <div class="container">
-        <div class="header"></div>
-        <div class="sidebar">
-<ul>
-    <li>Dashboard</li>
-    <li>Home</li>
-    <li>Profile</li>
-    <li>Messages</li>
-    <li>History</li>
-    <li>Tasks</li>
-    <li>Communities</li>
-    <li>Settings</li>
-    <li>Support</li>
-    <li>Privacy</li>
-</ul>
+        <div class="header">
+            <div class="header-top">
+                <div class="profile-icon"></div>
+                <div class="profile-name"></div>
+            </div>
+            <div class="header-bottom">
+                <div class="profile-icon"></div>
+                <div class="intro">Recipe's of</div>
+                <div class="profile-handle"></div>
+                <div class="recipe-actions">
+                      
+                    <input type="text" placeholder="Search Recipes">
+                    <button class="search-btn">Search</button>
+                    <button class="search-mine">Mine</button>
+                    <button class="search-friends">Friends</button>
+                    <button class="search-global">Global</button>
+                </div>
+               
+            </div>
         </div>
-        <div class="main"></div>
+        <div class="sidebar">
+            <ul class="dashboard">
+                <li><span></span>Dashboard</li>
+                <li><span></span>Home</li>
+                <li><span></span>Profile</li>
+                <li><span></span>Messages</li>
+                <li><span></span>History</li>
+                <li><span></span>Tasks</li>
+                <li><span></span>Communities</li>
+                <li></li>
+                <li><span></span>Settings</li>
+                <li><span></span>Support</li>
+                <li><span></span>Privacy</li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="main-header">
+                <div class="recipe-list-actions">
+                    <button class="new-recipe">New Recipe</button>
+                    <div class="recipe-list-title">My Recipes</div>
+                    <label>Sort:
+                    <select class="filter-sort" name="filter-sort">
+                        <option value="saves">Most Saves</option>
+                        <option value="recent">Recent</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="bmw">BMW</option>
+                        <option value="mini">Mini</option>
+                        <option value="ford">Ford</option>
+                      </select>
+                    </label>
+                </div>
+                <div>Suggestions</div>
+            </div>
+            <div class="recipe-container">
+                <ul class="recipe-list">
+                    <li>Passionfruit Foam</li>
+                    <li>Green Apple Syrup</li>
+                    <li>Banana Oleo</li>
+                    <li>Blackstrap Syrup</li>
+                    <li>Hibiscus Cinnamon Syrup</li>
+                    <li>Jamaican Spice Cordial</li>
+                </ul>
+            </div>
+            <div class="recipe-suggestions-container">
+                <ul class="recipe-suggestions-list">
+                    <li>Butter Syrup</li>
+                    <li>Woodruff Syrup</li>
+                    <li>Coconut Cream</li>
+                    <li>Milk-Washed Bourbon</li>
+                </ul>
+                <ul class="friend-recipes"> Friend's New Recipes
+                    <li>Pink Peppercorn Tequila
+                        <p>24hrs</p>
+                        <p>Pink Peppercorn<br>Salt<br>
+                         </p>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li> </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
