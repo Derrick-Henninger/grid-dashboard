@@ -4,6 +4,13 @@
     --royal-purple: rgb(145, 46, 145); 
 }
 
+html, body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 * button {
     background-color: cornsilk;
     border: solid goldenrod 2px;
@@ -13,11 +20,6 @@
     box-shadow: 1px 1px 2px black;
     border-radius: 3%;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-  }
 
   @font-face {
     font-family: "quicksand";
@@ -37,6 +39,7 @@ li {
     display: grid;
     grid: 100px 5fr / 1fr 3fr;
     font-family: quicksand, Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
 }
 
 .sidebar {
@@ -46,7 +49,7 @@ li {
 }
 
 .dashboard {
-    height: 100%;
+    height: 100vh;
     display: grid;
     gap: 15px;
     grid-template-rows: 50px repeat(6, 20px) 50px repeat(3, 20px);
@@ -156,12 +159,12 @@ li {
 .main {
     display: grid;
     grid-area: 2 / 2;
-    grid: clamp(45px, 60px, 150px) 1fr / 3fr 130px;
+    grid: 50px 1fr / 3fr 130px;
+    height: 100vh;
 }
 
 .main-header {
     background-color: var(--royal-purple);
-    padding: 10px;
     grid-area: 1 / 1 / 1 / 3;
     display: grid;
     grid: 1fr / 1fr 130px;
@@ -185,14 +188,14 @@ li {
 }
 
  .recipe-container {
-    height: 100%;
+    height: 100vh;
     box-shadow: 0px 1px 2px black inset;
     background-color: var(--mid-century-green);
  }
 
  .recipe-list {
     padding: 10px;
-    height: 100%;
+    height: 100vh;
     grid-area: 2 / 1 / 3 / 2;
     display: grid;
     gap: 15px;
@@ -214,42 +217,28 @@ li {
 }
 
 .recipe-suggestions-container {
+    display: grid;
     width: 100%;
+    height: 100vh;
     background-color: var(--mid-century-green);
     box-shadow: 1px 2px 5px black inset;
-    text-shadow: .5px .5px .75px black;
-}
-
-.recipe-suggestions-list {
-    padding: 10px;
-    display: grid;
-    gap: 15px;
-    grid: repeat(auto-fill, 100px) / repeat(auto-fill, 100px);
-    justify-content: center;
-}
-
-.recipe-suggestions-list li {
-    border: solid goldenrod 2px;
-    width: 100px;
-    height: 100px;
-    padding: 5px;
     box-sizing: border-box;
-    font-size: 12px;
-    box-shadow: 1px 1px 2px black;
-    border-radius: 3%;
-    background-color: cornsilk;
+    text-shadow: .5px .5px .75px black;
+    grid-template-rows: 1fr 1fr;
 }
 
-.friend-recipes {
+.recipe-suggestions-list, .friend-recipes {
     padding: 10px;
     display: grid;
     gap: 15px;
-    grid: 40px repeat(auto-fill, 100px) / repeat(auto-fill, 100px);
+    grid: repeat(auto-fill, 100px);
     justify-content: center;
-    text-align: center;
+    overflow-y: auto;
+    scrollbar-width: none;
+    box-sizing: border-box;
 }
 
-.friend-recipes li {
+.recipe-suggestions-list li, .friend-recipes li {
     border: solid goldenrod 2px;
     width: 100px;
     height: 100px;
